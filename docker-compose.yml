@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: arm64v8/mysql:oracle
+    
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
